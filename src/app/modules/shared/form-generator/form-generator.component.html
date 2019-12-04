@@ -1,0 +1,14 @@
+<p>form-generator works!</p>
+
+{{form.value | json}}
+<br>
+{{form.valid}}
+
+<form (submit)="onSubmit()" *ngIf="config" [formGroup]="form">
+    <div *ngFor="let fieldConfig of config">
+        <ng-container [appFieldGenerator]="[fieldConfig, form]"> 
+            <!-- x {{ fieldConfig.type }} -->
+
+        </ng-container>
+    </div>
+</form>

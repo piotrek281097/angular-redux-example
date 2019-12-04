@@ -22,6 +22,8 @@ import { DetailComponent } from './modules/items/detail/detail.component';
 import { StoreRouterConnectingModule } from '@ngrx/router-store';
 import { CustomSerializer } from './utils/router.serialize';
 import { SharedModule } from './modules/shared/shared.module';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -49,7 +51,8 @@ import { SharedModule } from './modules/shared/shared.module';
     }), EffectsModule.forRoot([AppEffects]), StoreRouterConnectingModule.forRoot({
         serializer: CustomSerializer
     }),
-    SharedModule
+    SharedModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],
   bootstrap: [AppComponent]

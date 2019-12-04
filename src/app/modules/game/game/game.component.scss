@@ -1,0 +1,24 @@
+.stat {
+    position: absolute;
+}
+
+
+.el {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    background-color: tomato;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+}
+
+
+.area {
+    background-color: #666;
+    min-height: 400px;
+    width: 100%;
+    border-radius: 5px;
+}
+

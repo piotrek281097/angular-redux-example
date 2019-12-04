@@ -1,0 +1,11 @@
+<p>cart works!</p>
+
+<app-data-grid [data]="carts$ | async" [headers]="['title','count','action','action']">
+    <ng-template let-item>
+        <td>{{ item.title }}</td>
+        <td>{{ item.count }}</td>
+        <td><button (click)="add(item)" mat-raised-button color='primary'>Add</button></td>
+        <td><button (click)="remove(item)" mat-raised-button color='primary'>Remove</button></td>
+        <td><button [routerLink]="[item.id]" mat-raised-button color='secondary'>more</button></td>
+    </ng-template>
+</app-data-grid>

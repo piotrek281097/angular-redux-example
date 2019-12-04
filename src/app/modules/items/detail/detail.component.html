@@ -1,0 +1,14 @@
+<p>detail works!</p>
+
+<!-- {{ item$ | async | json}}
+
+<div *ngFor="let item of item$ | async | keyvalue">
+    {{ item | json }}
+</div> -->
+
+<app-data-grid [data]="item$ | async | keyvalue" [headers]="['key', 'value']">
+    <ng-template let-item>
+        <td>{{ item.key }}</td>
+        <td>{{ item.value }}</td>
+    </ng-template>
+</app-data-grid>

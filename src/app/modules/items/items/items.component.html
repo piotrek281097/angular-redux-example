@@ -1,0 +1,11 @@
+<p>items works!</p>
+
+<app-data-grid [data]="data$ | async" [headers]="['title','price','action']">
+    <ng-template let-item>
+        <td>{{ item.title }}</td>
+        <td>{{ item.price }}</td>
+        <td>
+            <button (click)="addToCart(item)" mat-raised-button color='primary'>add</button>
+        </td>
+    </ng-template> <!-- po hasztagu # odwołamy się do tego ng-template w data-grid.component.ts -->
+</app-data-grid>

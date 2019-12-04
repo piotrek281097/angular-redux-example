@@ -1,0 +1,7 @@
+<p>game works!</p>
+
+<ng-template #playerTpl let-data>
+    <div class="el" [ngStyle]="{left: data.clientX + 'px', top: data.clientY + 'px'}">
+        {{data.username}} - {{data.score}}
+    </div>
+</ng-template>
